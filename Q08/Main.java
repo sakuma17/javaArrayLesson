@@ -4,10 +4,12 @@ public class Main{
 		System.out.print("何回サイコロをふる>");
 		int num=new Scanner(System.in).nextInt();
 		//boolean配列を作成する(配列変数名はisEven)
+		boolean[] isEven=new boolean[num];
 		for(int i=0;i<isEven.length;i++){
 			int dice=new Random().nextInt(6)+1;
 			System.out.println(dice);
 			//配列に偶数だったらtrue,奇数だったらfalseを代入
+			isEven[i]=dice%2==0?true:false;
 		}
 		System.out.println(Arrays.toString(isEven));
 	}
